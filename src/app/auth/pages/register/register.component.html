@@ -1,0 +1,26 @@
+<mat-card-header>
+    <div class="center-content"><mat-card-title>Nuevo Usuario</mat-card-title></div>
+    </mat-card-header>
+    <form autocomplete="off" [formGroup]="miFormulario" (ngSubmit)="register()">
+      <mat-card-content>
+        <mat-form-field class="example-full-width">
+          <input matInput type="text" placeholder="Usuario" formControlName="usuario">
+        </mat-form-field>
+        <mat-form-field class="example-full-width">
+          <input matInput type="email" placeholder="Email" formControlName="email">
+        </mat-form-field>
+        <mat-form-field class="example-full-width">
+            <input matInput type="text" placeholder="Nombre" formControlName="nombre">
+          </mat-form-field>
+          <mat-form-field class="example-full-width">
+            <input matInput type="text" placeholder="Apellido" formControlName="apellido">
+          </mat-form-field>
+          <mat-form-field class="example-full-width">
+            <input matInput type="password" placeholder="Contraseña" formControlName="password">
+          </mat-form-field>
+      </mat-card-content>
+      <button mat-stroked-button color="success" type="submit" class="btn-block margin">REGISTRARSE</button>
+    </form>
+    <mat-card-footer>
+      <div class="center-content margin"><mat-label><a href="/auth/login">Volver al inicio</a></mat-label></div>
+    </mat-card-footer>
